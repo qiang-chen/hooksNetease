@@ -1,0 +1,55 @@
+%juzhong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 100%;
+    height: 100%;
+}
+
+.loginTitle {
+    width: 100%;
+    height: 128px;
+    @extend %juzhong;
+    margin-top: 15px;
+
+    img {
+        width: 160px;
+        height: 53.73px;
+    }
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-sizing: border-box;
+
+    .user,
+    .possword {
+        margin: 10px 0;
+        height: 50px;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        font-size: 18px;
+    }
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+
+    span {
+        width: 100%;
+        @extend %juzhong;
+        color: #fff;
+        background-color: #108ee9;
+        border-radius: 5px;
+        font-size: 18px;
+        height: 46px;
+    }
+}

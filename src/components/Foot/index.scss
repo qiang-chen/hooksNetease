@@ -1,0 +1,23 @@
+.footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #fff;
+
+    .foot-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+
+        i {
+            font-size: 25px;
+        }
+
+        span {
+            font-size: 14px;
+        }
+    }
+}
