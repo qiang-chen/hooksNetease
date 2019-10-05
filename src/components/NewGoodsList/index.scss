@@ -1,0 +1,46 @@
+.newGoodsList {
+    width: 100%;
+
+    .newGoodsList-title {
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .newGoodsList-content {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap row;
+
+        .item {
+            width: 50%;
+            height: 200px;
+
+            img {
+                height: 140px;
+            }
+
+            .item-bottom {
+                width: 100%;
+                height: 60px;
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:last-child {
+                        color: darkred;
+
+                    }
+                }
+            }
+        }
+    }
+}

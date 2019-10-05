@@ -15,6 +15,10 @@ import ImgLazyLoad from 'components/ImgLazyLoad/index';
 import Channel from 'components/Channel/index';
 
 import BrandList from 'components/BrandList/index';
+import NewGoodsList from 'components/NewGoodsList/index';
+import HotGoodsList from 'components/HotGoodsList/index';
+import TopicList from 'components/TopicList/index';
+import CategoryList from 'components/CategoryList/index';
 import { Context } from 'components/Context/index';
 import BScroll from 'better-scroll';
 function Home(props: any) {
@@ -59,6 +63,22 @@ function Home(props: any) {
                 <Channel channel={homeList.channel}></Channel>
                 <div className='xian'></div>
                 <BrandList brandList={homeList.brandList}></BrandList>
+                <NewGoodsList
+                    newGoodsList={homeList.newGoodsList}
+                ></NewGoodsList>
+                <HotGoodsList
+                    hotGoodsList={homeList.hotGoodsList}
+                ></HotGoodsList>
+                <TopicList topicList={homeList.topicList}></TopicList>
+                {homeList.categoryList.map((item: any) => {
+                    return (
+                        <CategoryList
+                            name={item.name}
+                            goodsList={item.goodsList}
+                            key={item.id}
+                        ></CategoryList>
+                    );
+                })}
             </Context.Provider>
         </div>
     );

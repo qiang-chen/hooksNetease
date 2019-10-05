@@ -7,6 +7,7 @@
  */
 import React from 'react';
 import ImgLazyLoad from 'components/ImgLazyLoad/index';
+import './index.scss';
 interface IBprops {
     brandList: any[];
 }
@@ -14,17 +15,23 @@ interface IBprops {
 function BrandList(props: IBprops) {
     return (
         <div className='brandList'>
-            {props.brandList.map(item => {
-                console.log(item);
-                return (
-                    <div className='item' key={item.id}>
-                        <ImgLazyLoad
-                            offSetTop={65}
-                            realUrl={item['pic_url']}
-                        ></ImgLazyLoad>
-                    </div>
-                );
-            })}
+            <div className='brandList-title'>品牌制造商直供</div>
+            <div className='brandList-content'>
+                {props.brandList.map(item => {
+                    return (
+                        <div className='item' key={item.id}>
+                            <div className='absolt'>
+                                <span>{item.name}</span>
+                                <span>{item.floor_price}元起</span>
+                            </div>
+                            <ImgLazyLoad
+                                offSetTop={65}
+                                realUrl={item['pic_url']}
+                            ></ImgLazyLoad>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }
