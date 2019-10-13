@@ -22,7 +22,6 @@ export default (props: ItopicList) => {
                         dots={false}
                     >
                         {props.topicList.map(item => {
-                            console.log(item);
                             return (
                                 <div className='item' key={item.id}>
                                     <ImgLazyLoad

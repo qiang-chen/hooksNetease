@@ -7,6 +7,12 @@ const RouteConfig = [
             {
                 path: '/main/home',
                 component: React.lazy(() => import('views/main/home/index'))
+            },
+            {
+                path: '/main/categorys/:id',
+                component: React.lazy(() =>
+                    import('views/main/categorys/index')
+                )
             }
         ]
     },

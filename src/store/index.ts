@@ -4,13 +4,12 @@
 
 // let obj = {};
 // context.keys().forEach((key: any) => {
-//     obj[key.slice(2).slice(0, -3)] = context(key).default;
+//     obj[key.slice(2).slice(0, -3)] = new (context(key)).default();
 // });
 
 // export default obj;
-
-import Login from './modules/login';
+import Category from './modules/category';
 
 export default {
-    LoginMob: Login
+    category: new Category()
 };

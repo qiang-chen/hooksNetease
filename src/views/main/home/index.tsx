@@ -32,13 +32,13 @@ function Home(props: any) {
         imgHeight: [],
         brandList: []
     });
+    const [keyname, setkeyname] = useState(0);
     const HomeDom = useRef(null);
     const a: any = HomeDom['current'];
     useEffect(() => {
         api.getHomeList().then(res => {
             console.log(res.data);
             setHomeList(res.data);
-            console.log(HomeDom.current, 'hoo');
         });
     }, []);
     return (
